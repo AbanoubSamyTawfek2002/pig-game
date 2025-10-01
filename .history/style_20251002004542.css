@@ -1,0 +1,59 @@
+/* عشان نخلي البودي ياخد الطول كله ويظبط العناصر بالوسط */
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+  padding: 0;
+  background: linear-gradient(to left top, #753682 0%, #bf2e34 100%);
+  font-family: sans-serif;
+}
+
+/* الصندوق الرئيسي */
+main {
+  width: 90%;
+  max-width: 400px; /* الحد الأقصى */
+  background-color: rgba(255, 255, 255, 0.2);
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+}
+
+/* كل بلاير */
+.player {
+  padding: 2rem;
+  text-align: center;
+}
+
+/* الأزرار */
+button {
+  display: block;
+  width: 80%;
+  max-width: 250px;
+  margin: 10px auto;
+  padding: 0.8rem;
+  font-size: 1rem;
+  border: none;
+  border-radius: 20px;
+  background: white;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+button:hover {
+  background: #eee;
+}
+
+/* عشان النصوص والأرقام */
+.score {
+  font-size: 3rem;
+}
+
+.current {
+  margin-top: 1rem;
+  background: #e60050;
+  color: white;
+  border-radius: 10px;
+  padding: 1rem;
+}

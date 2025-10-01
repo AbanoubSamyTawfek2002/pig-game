@@ -25,22 +25,20 @@ body {
 .hidden {
   display: none;
 }
-
-/* 🎲 LAYOUT */
+/* LAYOUT */
 main {
   position: relative;
   width: 100rem;
-  max-width: 90%;
   height: 60rem;
   background-color: rgba(255, 255, 255, 0.35);
   backdrop-filter: blur(200px);
+  filter: blur();
   box-shadow: 0 3rem 5rem rgba(0, 0, 0, 0.25);
   border-radius: 9px;
   overflow: hidden;
   display: flex;
 }
 
-/* 🧑‍🤝‍🧑 PLAYER */
 .player {
   flex: 50%;
   padding: 9rem;
@@ -50,6 +48,7 @@ main {
   transition: all 0.75s;
 }
 
+/* ELEMENTS */
 .name {
   position: relative;
   font-size: 4rem;
@@ -76,11 +75,11 @@ main {
 .player--active .score {
   font-weight: 400;
 }
+
 .player--active .current {
   opacity: 1;
 }
 
-/* CURRENT BOX */
 .current {
   background-color: #c7365f;
   opacity: 0.8;
@@ -103,7 +102,7 @@ main {
   font-size: 3.5rem;
 }
 
-/* BUTTONS */
+/* ABSOLUTE POSITIONED ELEMENTS */
 .btn {
   position: absolute;
   left: 50%;
@@ -118,6 +117,7 @@ main {
   font-weight: 400;
   transition: all 0.2s;
 
+  background-color: white;
   background-color: rgba(255, 255, 255, 0.6);
   backdrop-filter: blur(10px);
 
@@ -151,7 +151,6 @@ main {
   outline: none;
 }
 
-/* 🎲 DICE */
 .dice {
   position: absolute;
   left: 50%;
@@ -161,59 +160,11 @@ main {
   box-shadow: 0 2rem 5rem rgba(0, 0, 0, 0.2);
 }
 
-/* WINNER */
 .player--winner {
   background-color: #2f2f2f;
 }
+
 .player--winner .name {
   font-weight: 700;
   color: #c7365f;
-}
-
-/* 📱 RESPONSIVE FOR MOBILE */
-@media (max-width: 768px) {
-  main {
-    flex-direction: column;
-    width: 95%;
-    height: auto;
-    padding: 1rem;
-  }
-
-  .player {
-    width: 100%;
-    padding: 4rem 2rem;
-  }
-
-  .score {
-    font-size: 5rem;
-  }
-
-  .current {
-    width: 80%;
-  }
-
-  .dice {
-    position: relative;
-    top: auto;
-    left: auto;
-    transform: none;
-    margin: 2rem auto;
-    height: 8rem;
-  }
-
-  .btn {
-    position: relative;
-    left: auto;
-    transform: none;
-    width: 80%;
-    max-width: 300px;
-    margin: 1rem auto;
-    display: block;
-  }
-
-  .btn--new,
-  .btn--roll,
-  .btn--hold {
-    top: auto;
-  }
 }
